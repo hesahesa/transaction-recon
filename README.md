@@ -60,6 +60,8 @@ go run main.go \
 | `amount` | Transaction amount (decimal) |
 | `date` | Transaction date (`YYYY-MM-DD`) |
 
+Note: the date is assumed in UTC time zone for simplicity.
+
 ## Running Tests
 To run unit tests for reconciliation logic and CSV parsing:
 
