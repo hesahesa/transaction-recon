@@ -9,6 +9,11 @@ A Go-based command-line tool designed to identify unmatched transactions between
 - Identifies bank records missing from the system, grouped by source bank file.
 - Filters reconciliation by a specified date range.
 
+## Assumptions
+- The date in the bank statement csv and in the CLI parameters are assumed in UTC time zone for simplicity.
+- The currency in the csvs are the same
+- Because this tool do the matching by Date and Amount, the total discrepancies (sum of absolute differences in amount between matched transactions) will be 0
+
 ## Tech Stack
 - **Language**: Go (Golang)
 - **Data Format**: CSV
@@ -59,8 +64,6 @@ go run main.go \
 | `unique_identifier` | Unique identifier (string) |
 | `amount` | Transaction amount (decimal) |
 | `date` | Transaction date (`YYYY-MM-DD`) |
-
-Note: the date is assumed in UTC time zone for simplicity.
 
 ## Running Tests
 To run unit tests for reconciliation logic and CSV parsing:
