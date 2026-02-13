@@ -10,17 +10,17 @@ const (
 )
 
 type SystemTransaction struct {
-	TrxID           string          `csv:"trxID"`
-	Amount          float64         `csv:"amount"`
-	Type            TransactionType `csv:"type"`
-	TransactionTime time.Time       `csv:"transactionTime"`
+	TrxID           string
+	Amount          float64
+	Type            TransactionType
+	TransactionTime time.Time
 }
 
 type BankStatementRecord struct {
-	UniqueID string    `csv:"unique_identifier"`
-	Amount   float64   `csv:"amount"`
-	Date     time.Time `csv:"date"`
-	BankName string    `csv:"-"`
+	UniqueID string
+	Amount   float64
+	Date     time.Time
+	BankName string
 }
 
 type ReconciliationSummary struct {
